@@ -1,6 +1,6 @@
 [project]
 name = "typed-soup"
-version = "0.1.6"
+version = "1.0.0"
 description = "A type-safe wrapper around BeautifulSoup and related HTML parsing utilities"
 authors = [{ name = "Robert Shecter", email = "robert@public.law" }]
 license = { text = "MIT" }
