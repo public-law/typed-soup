@@ -1,6 +1,5 @@
-from typing import TypeVar, Optional, List, Any, Dict, cast
+from typing import TypeVar, Optional, List, Any, Dict
 from bs4 import BeautifulSoup, Tag
-from scrapy.http.response.html import HtmlResponse
 
 T = TypeVar('T')
 
@@ -100,17 +99,3 @@ class TypedSoup:
     def string(self) -> str | None:
         """Get the string content of the element (similar to BeautifulSoup's .string)."""
         return self._element.string
-
-
-def make_soup(response: HtmlResponse) -> BeautifulSoup:
-    """
-    Create a BeautifulSoup object from the Response body.
-    """
-    return BeautifulSoup(cast(str, response.body), "html.parser")
-
-
-def from_response(response: HtmlResponse) -> TypedSoup:
-    """
-    Create a type-safe BeautifulSoup object from an HTML response.
-    """
-    return TypedSoup(make_soup(response))

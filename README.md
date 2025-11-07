@@ -59,27 +59,7 @@ if element:
 
 ## Usage
 
-If you're using Scrapy, you can use the `from_response` function to create a `TypedSoup` object from a Scrapy response:
-
-```python
-from typed_soup import from_response
-from scrapy.http.response.html import HtmlResponse
-
-# Assume 'response' is an HtmlResponse object
-soup = from_response(response)
-
-# Find an element
-element = soup.find("div", class_="example")
-if element:
-    print(element.get_text())
-
-# Find all elements
-elements = soup("p")
-for elem in elements:
-    print(elem.get_text())
-```
-
-Or, without Scrapy, you can explicity wrap a `BeautifulSoup` object in `TypedSoup`:
+Wrap a `BeautifulSoup` object in `TypedSoup` to add type safety:
 
 ```python
 from typed_soup import TypedSoup
@@ -107,7 +87,6 @@ I'm adding functions as I need them. If you have a request, please open an issue
 
 And then these help create a `TypedSoup` object:
 
-- `from_response`
 - `TypedSoup`
 
 ## Type Safety Benefits

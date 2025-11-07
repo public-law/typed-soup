@@ -1,3 +1,3 @@
-from .typed_soup import TypedSoup, from_response
+from .typed_soup import TypedSoup
 
-__all__ = ["TypedSoup", "from_response"]
+__all__ = ["TypedSoup"]
