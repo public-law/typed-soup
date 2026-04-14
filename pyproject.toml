@@ -51,6 +51,6 @@ name = "typed-soup"
 packages = [{ include = "typed_soup" }]
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.3.5"
+pytest = "^9.0.3"
 pytest-watch = "^4.2.0"
 pyright = "^1.1.401"
